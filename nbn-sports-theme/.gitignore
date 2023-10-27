@@ -1,6 +1,4 @@
 node_modules
-<<<<<<< HEAD
-=======
 
 /.cache
 /build
@@ -15,4 +13,3 @@ database.sqlite
 .env
 package-lock.json
 yarn.lock
->>>>>>> develop
