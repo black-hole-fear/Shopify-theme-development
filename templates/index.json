@@ -1,56 +1,14 @@
 {
   "sections": {
-    "2ba2a35f-1451-4774-93c9-bc9b2be6aefe": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16952375771386__2ba2a35f-1451-4774-93c9-bc9b2be6aefe-image-1": {
-          "type": "image",
-          "settings": {
-            "show_overlay": false,
-            "overlay_opacity": 30,
-            "text_color": "#ffffff",
-            "title": "Slide title",
-            "content": "Tell your story",
-            "content_position": "middle_center",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "button_text": "Button",
-            "link": ""
-          }
-        },
-        "template--16952375771386__2ba2a35f-1451-4774-93c9-bc9b2be6aefe-image-2": {
-          "type": "image",
-          "settings": {
-            "show_overlay": true,
-            "overlay_opacity": 30,
-            "text_color": "#ffffff",
-            "title": "Slide title",
-            "content": "Tell your story",
-            "content_position": "middle_center",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "button_text": "Button",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16952375771386__2ba2a35f-1451-4774-93c9-bc9b2be6aefe-image-1",
-        "template--16952375771386__2ba2a35f-1451-4774-93c9-bc9b2be6aefe-image-2"
+    "e8a776b2-9537-4854-a626-99b6c82bed21": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "section {margin: 0;}"
       ],
       "settings": {
-        "edge_to_edge": true,
-        "section_size": "preserve_ratio",
-        "carousel_effect": "slide",
-        "autoplay": true,
-        "cycle_speed": 5
-      }
-    },
-    "455000f7-6b73-4979-90af-56421377d410": {
-      "type": "video",
-      "settings": {
-        "title": "",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+        "title": "Your title",
+        "include_margins": true,
+        "liquid": "<p>Write or copy\/paste Liquid code<\/p>"
       }
     },
     "0736ed11-aefb-42f1-b0a4-9168d028bd07": {
@@ -518,8 +476,7 @@
     }
   },
   "order": [
-    "2ba2a35f-1451-4774-93c9-bc9b2be6aefe",
-    "455000f7-6b73-4979-90af-56421377d410",
+    "e8a776b2-9537-4854-a626-99b6c82bed21",
     "0736ed11-aefb-42f1-b0a4-9168d028bd07",
     "7ba1ca24-5997-4dfc-b263-8ac387ada14c",
     "collection-list",
