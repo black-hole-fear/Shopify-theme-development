@@ -62,6 +62,8 @@
             <span class="product-form__option-name text--strong">{{ option.name }}: <span class="product-form__selected-value">{{ option.selected_value }}</span></span>
 
             <div class="variant-swatch-list">
+              {%- capture option_name -%}option{{ option.position }}{%- endcapture -%}
+
               {%- for value in option.values -%}
                 {%- capture variant_swatch_id -%}{{ option_name }}-{{ forloop.index }}{%- endcapture -%}
 

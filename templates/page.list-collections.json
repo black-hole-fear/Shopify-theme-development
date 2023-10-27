@@ -1,1 +1,86 @@
-{"sections":{"main":{"type":"main-collections-list","settings":{"collections_to_show":"selected"}},"newsletter":{"type":"newsletter","settings":{}}},"order":["main","newsletter"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-collections-list",
+      "settings": {
+        "collections_to_show": "selected",
+        "collection_linklist": "",
+        "show_collection_title": true,
+        "show_collection_overlay": true,
+        "collection_overlay_opacity": 20
+      }
+    },
+    "856d95b9-d98f-464b-8361-2bf574196b25": {
+      "type": "logo-list",
+      "blocks": {
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-1": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-2": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-3": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-4": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-5": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-6": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-1",
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-2",
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-3",
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-4",
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-5",
+        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-6"
+      ],
+      "custom_css": [
+        "section {margin-top: 0;}",
+        ".section__header {display: flex; justify-content: center;}"
+      ],
+      "settings": {
+        "title": "Brands",
+        "link_title": "",
+        "link": "#"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Subscribe to our newsletter",
+        "content": "<p>Get notified about product launches and special offers!<\/p>",
+        "background": "#1e2d7d",
+        "text": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "856d95b9-d98f-464b-8361-2bf574196b25",
+    "newsletter"
+  ]
+}

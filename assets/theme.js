@@ -3328,11 +3328,7 @@
               productFormInventoryElement.classList.add('inventory--high');
             }
           } else {
-            if (variantInventoryQuantity <= this.options['lowInventoryThreshold']) {
-              productFormInventoryElement.classList.add('inventory--low');
-            } else {
-              productFormInventoryElement.classList.add('inventory--high');
-            }
+            productFormInventoryElement.classList.add('inventory--high');
           }
         } // We also need to update the stock countdown if setup
 
@@ -12959,10 +12955,6 @@
     function ShippingEstimator(element, options) {
       _classCallCheck(this, ShippingEstimator);
 
-      if (!element) {
-        return;
-      }
-
       this.element = element;
       this.delegateElement = new Delegate(this.element);
       this.options = options;
@@ -13518,7 +13510,20 @@
     }, {
       key: "_initShopifyReviews",
       value: function _initShopifyReviews() {
-        // If loaded by quick view, we need to do various initialization stuff
+        var _this2 = this;
+
+        if (Shopify.designMode && window.SPR) {
+          window.SPR.initDomEls();
+          window.SPR.loadProducts();
+        }
+
+        window.SPRCallbacks = {}; // This allows us to add some class to adjust the styling
+
+        window.SPRCallbacks.onFormSuccess = function () {
+          _this2.element.querySelector('#shopify-product-reviews .spr-form').classList.add('spr-form-submitted');
+        }; // If loaded by quick view, we need to do various initialization stuff
+
+
         if (this.options['isQuickView'] && this.options['showPaymentButton'] && window.Shopify.PaymentButton) {
           Shopify.PaymentButton.init();
         }
@@ -16758,7 +16763,7 @@
     _createClass(GiftCardRecipient, [{
       key: "connectedCallback",
       value: function connectedCallback() {
-        var _this$recipientCheckb, _this$recipientSendOn, _this$recipientSendOn2;
+        var _this$recipientCheckb;
 
         var properties = Array.from(this.querySelectorAll('[name*="properties"]')),
             checkboxPropertyName = 'properties[__shopify_send_gift_card_to_recipient]';
@@ -16770,19 +16775,6 @@
         });
         this.recipientFieldsContainer = this.querySelector('.gift-card-recipient__fields');
         (_this$recipientCheckb = this.recipientCheckbox) === null || _this$recipientCheckb === void 0 ? void 0 : _this$recipientCheckb.addEventListener('change', this._synchronizeProperties.bind(this));
-        this.offsetProperty = this.querySelector('[name="properties[__shopify_offset]"]');
-
-        if (this.offsetProperty) {
-          this.offsetProperty.value = new Date().getTimezoneOffset().toString();
-        }
-
-        this.recipientSendOnProperty = this.querySelector('[name="properties[Send on]"]'); // Shopify requires the date to be maximum 90 days in the future
-
-        var minDate = new Date();
-        var maxDate = new Date();
-        maxDate.setDate(minDate.getDate() + 90);
-        (_this$recipientSendOn = this.recipientSendOnProperty) === null || _this$recipientSendOn === void 0 ? void 0 : _this$recipientSendOn.setAttribute('min', this._formatDate(minDate));
-        (_this$recipientSendOn2 = this.recipientSendOnProperty) === null || _this$recipientSendOn2 === void 0 ? void 0 : _this$recipientSendOn2.setAttribute('max', this._formatDate(maxDate));
 
         this._synchronizeProperties();
       }
@@ -16795,13 +16787,6 @@
           return property.disabled = !_this.recipientCheckbox.checked;
         });
         this.recipientFieldsContainer.classList.toggle('js:hidden', !this.recipientCheckbox.checked);
-      }
-    }, {
-      key: "_formatDate",
-      value: function _formatDate(date) {
-        var offset = date.getTimezoneOffset();
-        var offsetDate = new Date(date.getTime() - offset * 60 * 1000);
-        return offsetDate.toISOString().split('T')[0];
       }
     }]);
 
@@ -17047,7 +17032,7 @@
 
           toTop += element.offsetTop;
           window.scrollTo({
-            behavior: 'smfooth',
+            behavior: 'smooth',
             top: toTop - offset
           });
           event.preventDefault();

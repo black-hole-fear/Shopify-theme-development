@@ -53,10 +53,10 @@
   },
   "header": {
     "general": {
-      "country": "País/Região",
+      "country": "País\/Região",
       "language": "Idioma",
       "account": "Minha conta",
-      "login": "Entrar / Criar conta",
+      "login": "Entrar \/ Criar conta",
       "welcome": "Olá {{first_name}}",
       "cart": "Carrinho"
     },
@@ -87,7 +87,7 @@
   },
   "footer": {
     "general": {
-      "country": "País/Região",
+      "country": "País\/Região",
       "language": "Idioma",
       "follow_us": "Siga-nos",
       "we_accept": "Nós aceitamos"
@@ -97,7 +97,6 @@
       "input": "Seu e-mail",
       "submit": "Enviar"
     },
-
     "cookie_bar": {
       "accept": "Aceitar",
       "decline": "Recusar"
@@ -454,12 +453,10 @@
       "print": "Imprimir",
       "add_to_apple_wallet": "Adicionar ao Apple Wallet"
     },
-
     "recipient": {
       "checkbox": "Quero enviar como presente",
       "email_label": "E-mail do destinatário",
       "name_label": "Nome do destinatário (opcional)",
-      "send_on_label": "Enviar em (opcional)",
       "message_label": "Mensagem (opcional)"
     }
   },
