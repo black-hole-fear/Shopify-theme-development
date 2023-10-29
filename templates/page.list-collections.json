@@ -2,70 +2,58 @@
   "sections": {
     "main": {
       "type": "main-collections-list",
+      "blocks": {
+        "7fa9d70a-0f1a-4bd5-b2fe-24c323c8216c": {
+          "type": "collection",
+          "settings": {
+            "collection": "adidas"
+          }
+        },
+        "ee11f5bf-6806-448a-b371-04126504f4fb": {
+          "type": "collection",
+          "settings": {
+            "collection": "sony"
+          }
+        },
+        "7dd83b54-837a-425a-9903-703fb9e69d1e": {
+          "type": "collection",
+          "settings": {
+            "collection": "lg"
+          }
+        },
+        "e30c10d7-6a7d-41ae-9a39-06ffb3f2c35f": {
+          "type": "collection",
+          "settings": {
+            "collection": "samsung"
+          }
+        },
+        "81e342d7-e887-4005-99f5-a822ed01a6d7": {
+          "type": "collection",
+          "settings": {
+            "collection": "akg"
+          }
+        },
+        "c33c5339-6bc3-4e6c-aa3d-1598d2738e51": {
+          "type": "collection",
+          "settings": {
+            "collection": "nike"
+          }
+        }
+      },
+      "block_order": [
+        "7fa9d70a-0f1a-4bd5-b2fe-24c323c8216c",
+        "ee11f5bf-6806-448a-b371-04126504f4fb",
+        "7dd83b54-837a-425a-9903-703fb9e69d1e",
+        "e30c10d7-6a7d-41ae-9a39-06ffb3f2c35f",
+        "81e342d7-e887-4005-99f5-a822ed01a6d7",
+        "c33c5339-6bc3-4e6c-aa3d-1598d2738e51"
+      ],
       "settings": {
         "collections_to_show": "selected",
         "collection_linklist": "",
         "show_collection_title": true,
         "show_collection_overlay": true,
         "collection_overlay_opacity": 20
-      }
-    },
-    "856d95b9-d98f-464b-8361-2bf574196b25": {
-      "type": "logo-list",
-      "blocks": {
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-1": {
-          "type": "logo",
-          "settings": {
-            "link": ""
-          }
-        },
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-2": {
-          "type": "logo",
-          "settings": {
-            "link": ""
-          }
-        },
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-3": {
-          "type": "logo",
-          "settings": {
-            "link": ""
-          }
-        },
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-4": {
-          "type": "logo",
-          "settings": {
-            "link": ""
-          }
-        },
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-5": {
-          "type": "logo",
-          "settings": {
-            "link": ""
-          }
-        },
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-6": {
-          "type": "logo",
-          "settings": {
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-1",
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-2",
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-3",
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-4",
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-5",
-        "template--16952375935226__856d95b9-d98f-464b-8361-2bf574196b25-logo-6"
-      ],
-      "custom_css": [
-        "section {margin-top: 0;}",
-        ".section__header {display: flex; justify-content: center;}"
-      ],
-      "settings": {
-        "title": "Brands",
-        "link_title": "",
-        "link": "#"
       }
     },
     "newsletter": {
@@ -80,7 +68,6 @@
   },
   "order": [
     "main",
-    "856d95b9-d98f-464b-8361-2bf574196b25",
     "newsletter"
   ]
 }

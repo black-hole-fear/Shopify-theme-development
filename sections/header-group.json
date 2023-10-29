@@ -67,7 +67,7 @@
         "logo_max_width": 90,
         "mobile_logo_max_width": 80,
         "show_locale_selector": true,
-        "show_country_selector": false,
+        "show_country_selector": true,
         "navigation_menu": "main-menu",
         "navigation_mobile_menu": "",
         "desktop_navigation_layout": "inline",
