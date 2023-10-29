@@ -19,18 +19,6 @@
     "header": {
       "type": "header",
       "blocks": {
-        "4c298d6f-7667-4756-b96f-8ec12a4ed604": {
-          "type": "mega_menu",
-          "settings": {
-            "menu_item": "All products",
-            "image_1_heading": "Your image",
-            "image_1_text": "Tell your story",
-            "image_1_link": "",
-            "image_2_heading": "Your image",
-            "image_2_text": "Tell your story",
-            "image_2_link": ""
-          }
-        },
         "d27ad729-f12c-487c-9b2b-32803eddfc23": {
           "type": "mega_menu",
           "settings": {
@@ -69,7 +57,6 @@
         }
       },
       "block_order": [
-        "4c298d6f-7667-4756-b96f-8ec12a4ed604",
         "d27ad729-f12c-487c-9b2b-32803eddfc23",
         "fe71affb-efc0-4e02-856d-d020d7f29d8a",
         "04c019de-ef0e-483a-bc3f-251f4740f4fe"
