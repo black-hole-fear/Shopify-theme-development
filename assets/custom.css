@@ -12,7 +12,7 @@
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
 }
-#shopify-section-template--16952375771386__e8a776b2-9537-4854-a626-99b6c82bed21 .text-center.pb224.pt224.o_colored_level.o_background_video.oe_img_bg.o_bg_img_center.col-lg-6 {
+.text-center.pb224.pt224.o_colored_level.o_background_video.oe_img_bg.o_bg_img_center {
     display: flex;
     -webkit-box-direction: normal;
     flex-direction: column;
@@ -50,4 +50,12 @@
 }
 main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lza5e {
   padding: 0 !important;
+}
+@media (max-width: 768px) {
+  #shopify-section-template--16952375771386__e8a776b2-9537-4854-a626-99b6c82bed21 .text-center.pb224.pt224.o_colored_level.o_background_video.oe_img_bg.o_bg_img_center {
+    width: 100%;
+  }
+  .col-lg-4 {
+    height: 230px;
+  }
 }
