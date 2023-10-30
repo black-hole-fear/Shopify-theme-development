@@ -1,3 +1,4 @@
+
 .container {
   max-width: 100%;
   width: 100%;
@@ -46,4 +47,7 @@
 }
 .text-center.pb224.pt224.o_colored_level.o_background_video.oe_img_bg.o_bg_img_center.col-lg-6 p {
    color: #5c5c5c;
+}
+main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lza5e {
+  padding: 0 !important;
 }
