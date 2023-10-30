@@ -3,12 +3,17 @@
     "e8a776b2-9537-4854-a626-99b6c82bed21": {
       "type": "custom-liquid",
       "custom_css": [
-        "section {margin: 0;}"
+        "section {margin: 0;}",
+        ".slide {display: flex;}",
+        ".slide-video {top: 0; width: 50%;}",
+        ".slide-content {width: 50%;}",
+        ".container {margin: 0; padding: 0;}",
+        ".text-center.pb224.pt224.o_colored_level.o_background_video.oe_img_bg.o_bg_img_center.col-lg-6 {padding: 0; padding: 0; display: flex; -webkit-box-direction: normal; flex-direction: column; justify-content: center; background-position: center; background-position-x: center; background-position-y: center; background-size: cover;}"
       ],
       "settings": {
-        "title": "What is your game?",
+        "title": "",
         "include_margins": true,
-        "liquid": "<p>Write or copy\/paste Liquid code<\/p>"
+        "liquid": "<div class=\"container\" style=\"max-width: 100%; width: 100%;\">\n  <div class=\"row slide\" style=\"\">\n    <div class=\"text-center pb224 pt224 o_colored_level o_background_video oe_img_bg o_bg_img_center col-lg-6 col-md-6 col-sm-6\" data-name=\"Block\" style=\"background-image: url(&quot;\/web\/image\/website.s_masonry_block_default_image_1&quot;);\" data-bg-video-src=\"\/\/player.vimeo.com\/video\/368484050?autoplay=1&amp;muted=1&amp;loop=1\">\n      <div class=\"o_bg_video_container\">\n        <iframe id=\"o_bg_video_iframe_2\" class=\"o_bg_video_iframe fade show\" frameborder=\"0\" src=\"\/\/player.vimeo.com\/video\/368484050?autoplay=1&amp;muted=1&amp;loop=1\" style=\"width: 145.996%;height: 100%;left: -22.9978%;top: 0px;position: relative;\"><\/iframe>\n      <\/div>\n      <p style=\"z-index: 3;\">\n        <span style=\"font-size: 36px; font-weight: bolder;\">\n          <font class=\"text-o-color-1\" style=\"font-size: 62px;\">what's your <br>game ?<\/font>\n    <\/span>\n  <\/p>\n<\/div>\n<div class=\"col-lg-6 col-md-6  col-sm-6 s_col_no_resize\" style=\"padding-right: 0;\">\n <div class=\"row w-100 h-100\">\n<div class=\"col-lg-4\"><\/div>\n<div class=\"col-lg-4\"><\/div>\n<div class=\"col-lg-4\"><\/div>\n<div class=\"col-lg-4\"><\/div>\n<div class=\"col-lg-4\"><\/div>\n<div class=\"col-lg-4\"><\/div>\n <\/div>\n<\/div>\n  <\/div>\n<\/div>"
       }
     },
     "0736ed11-aefb-42f1-b0a4-9168d028bd07": {
@@ -107,56 +112,80 @@
     "collection-list": {
       "type": "collection-list",
       "blocks": {
-        "collection-1": {
+        "1d5f6542-167a-49de-9210-ebb51c9f5d5c": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "automotive",
             "link": ""
           }
         },
-        "collection-2": {
+        "9432b873-f1b7-4afc-bbfc-161ba5d75eb1": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "bags",
             "link": ""
           }
         },
-        "collection-3": {
+        "7edf0001-25d8-45a3-aa4c-883bf011305c": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "drinkware",
             "link": ""
           }
         },
-        "collection-4": {
+        "d8775619-5384-457a-90db-0eae55f62b8a": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "eco-friendly",
             "link": ""
           }
         },
-        "collection-5": {
+        "85043b6c-5de8-42d7-9995-70dae437c99c": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "home",
             "link": ""
           }
         },
-        "collection-6": {
+        "aa156119-63fc-4e5d-a48d-93d805e80e46": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "id-lanyards",
+            "link": ""
+          }
+        },
+        "973b0adb-d5e0-48f0-8316-b57794efc4fb": {
+          "type": "collection",
+          "settings": {
+            "collection": "keychains-toys",
+            "link": ""
+          }
+        },
+        "1bb82aa9-e74a-4ae6-a02f-52ab7d59ff76": {
+          "type": "collection",
+          "settings": {
+            "collection": "outdoors",
+            "link": ""
+          }
+        },
+        "3b60dd66-a6f0-42c1-bb6e-cdb0b5983307": {
+          "type": "collection",
+          "settings": {
+            "collection": "office",
             "link": ""
           }
         }
       },
       "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3",
-        "collection-4",
-        "collection-5",
-        "collection-6"
+        "1d5f6542-167a-49de-9210-ebb51c9f5d5c",
+        "9432b873-f1b7-4afc-bbfc-161ba5d75eb1",
+        "7edf0001-25d8-45a3-aa4c-883bf011305c",
+        "d8775619-5384-457a-90db-0eae55f62b8a",
+        "85043b6c-5de8-42d7-9995-70dae437c99c",
+        "aa156119-63fc-4e5d-a48d-93d805e80e46",
+        "973b0adb-d5e0-48f0-8316-b57794efc4fb",
+        "1bb82aa9-e74a-4ae6-a02f-52ab7d59ff76",
+        "3b60dd66-a6f0-42c1-bb6e-cdb0b5983307"
       ],
       "settings": {
         "title": "Our collections",
