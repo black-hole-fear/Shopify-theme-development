@@ -1,4 +1,4 @@
-.section {
+#main > .shopify-section:first-child > .section:first-child {
   display: flex;
   justify-content: center;
 }
