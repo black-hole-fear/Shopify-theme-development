@@ -33,7 +33,7 @@
         "24bd4013-1dfd-46f8-bb36-c03542d4d089": {
           "type": "text",
           "settings": {
-            "content": "<p style=\"font-size:16px;font-weight:bold;\">Min Qty: <strong>{{ product.metafields.custom.min_qty.value }}<\/strong><\/p>"
+            "content": "<p>Min Qty: <strong>{{ product.metafields.custom.min_qty.value }}<\/strong><\/p>"
           }
         },
         "eee211df-17ce-45dc-bcc4-d3f0e200f21f": {
