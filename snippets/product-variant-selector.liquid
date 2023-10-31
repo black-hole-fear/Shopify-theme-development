@@ -140,7 +140,7 @@
     <span class="product-form__info-title text--strong">{{ 'product.form.price' | t }}:</span>
 
     <div class="product-form__info-content" role="region" aria-live="polite">
-      <div class="price-list">
+      <div class="price-list d-flex justify-content-between">
         {%- if selected_variant.compare_at_price > selected_variant.price -%}
           <span class="price price--highlight">
             <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
@@ -172,6 +172,9 @@
             {%- endif -%}
           </span>
         {%- endif -%}
+        <span style="font-size:20px;color:#B0B2B3;font-weight:bold;">
+        From {{ product.price_min | money }} to {{ product.price_max | money }}
+        </span>
       </div>
 
       <div class="product-form__price-info" style="display: {% if selected_variant.unit_price_measurement %}block{% else %}none{% endif %}">
