@@ -82,3 +82,17 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
    color: #fff;
 }
 /* End Link Button */
+
+.button-pdf {
+  background-color: #3f6e7c;
+   color: #fff;
+   font-size: 16px;
+   padding: 0 30px;
+   text-align: center;
+   display: inline-block;
+   text-decoration: none;
+}
+.button-pdf:hover {
+  background: #335c68;
+  color: #fff;
+}

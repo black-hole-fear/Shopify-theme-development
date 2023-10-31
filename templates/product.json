@@ -16,16 +16,33 @@
           "type": "variant_selector",
           "settings": {
             "selector_mode": "block",
-            "color_mode": "color",
+            "color_mode": "dropdown",
             "show_quantity_selector": true,
             "show_taxes_included": false,
             "show_inventory_quantity": true,
-            "low_inventory_threshold": 0
+            "low_inventory_threshold": 72
+          }
+        },
+        "63509649-6bd6-4baf-a630-f439c0f5ba96": {
+          "type": "button",
+          "settings": {
+            "text": "Click here for manual",
+            "link": "{{ product.metafields.custom.pdf_link.value }}"
+          }
+        },
+        "24bd4013-1dfd-46f8-bb36-c03542d4d089": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Min Qty: <strong> <\/strong>{{ product.metafields.custom.min_qty.value }}<\/p>"
+          }
+        },
+        "eee211df-17ce-45dc-bcc4-d3f0e200f21f": {
+          "type": "store_pickup",
+          "settings": {
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "show_payment_button": true,
             "show_gift_card_recipient": true
@@ -34,18 +51,29 @@
         "description": {
           "type": "description",
           "settings": {
-            "display_mode": "show_all"
+            "display_mode": "view_more"
+          }
+        },
+        "73d3e6f4-67c0-4a21-9052-5bcc4a4bf1cb": {
+          "type": "shipping_estimator",
+          "settings": {
+            "shipping_estimator_default_country": "United States",
+            "show_refunds_policy": true
           }
         }
       },
       "block_order": [
         "product_meta",
         "variant_selector",
+        "63509649-6bd6-4baf-a630-f439c0f5ba96",
+        "24bd4013-1dfd-46f8-bb36-c03542d4d089",
+        "eee211df-17ce-45dc-bcc4-d3f0e200f21f",
         "buy_buttons",
-        "description"
+        "description",
+        "73d3e6f4-67c0-4a21-9052-5bcc4a4bf1cb"
       ],
       "settings": {
-        "image_size": "small",
+        "image_size": "medium",
         "enable_video_looping": true,
         "enable_image_zoom": true,
         "zoom_effect": "outside",

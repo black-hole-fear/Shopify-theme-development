@@ -6472,8 +6472,8 @@ select option {
   box-shadow: 2px 0 0 0 var(--secondary-background);
 }
 .plyr.plyr--full-ui.plyr--video .plyr__progress input[type=range]::-webkit-slider-runnable-track {
-  background-image: linear-gradient(to right, currentColor 0, rgba(var(--text-color-rgb) 0.6)) 0);
-  background-image: linear-gradient(to right, currentColor var(--value, 0), rgba(var(--text-color-rgb) 0.6)) var(--value, 0));
+  background-image: linear-gradient(to right, currentColor 0, rgba(var(--text-color-rgb) 0.6));
+  background-image: linear-gradient(to right, currentColor var(--value, 0), rgba(var(--text-color-rgb) 0.6)) var(--value, 0);
 }
 .plyr.plyr--full-ui.plyr--video .plyr__progress input[type=range]::-moz-range-track {
   background-color: rgba(var(--text-color-rgb) 0.6);
