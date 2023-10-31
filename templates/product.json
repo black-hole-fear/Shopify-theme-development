@@ -16,7 +16,7 @@
           "type": "variant_selector",
           "settings": {
             "selector_mode": "block",
-            "color_mode": "dropdown",
+            "color_mode": "color",
             "show_quantity_selector": true,
             "show_taxes_included": false,
             "show_inventory_quantity": true,
@@ -33,7 +33,7 @@
         "24bd4013-1dfd-46f8-bb36-c03542d4d089": {
           "type": "text",
           "settings": {
-            "content": "<p>Min Qty: <strong> <\/strong>{{ product.metafields.custom.min_qty.value }}<\/p>"
+            "content": "<p style=\"font-size:16px;font-weight:bold;\">Min Qty: <strong>{{ product.metafields.custom.min_qty.value }}<\/strong><\/p>"
           }
         },
         "eee211df-17ce-45dc-bcc4-d3f0e200f21f": {
@@ -43,8 +43,9 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
-            "show_payment_button": true,
+            "show_payment_button": false,
             "show_gift_card_recipient": true
           }
         },
@@ -52,6 +53,15 @@
           "type": "description",
           "settings": {
             "display_mode": "view_more"
+          }
+        },
+        "00f9dcd5-4f13-499e-ba6b-9b3c21de8cc3": {
+          "type": "content",
+          "settings": {
+            "title": "Care Guide",
+            "content": "<p>{{ product.metafields.descriptors.care_guide | metafield_tag }}<\/p>",
+            "page": "",
+            "display_mode": "show_all"
           }
         },
         "73d3e6f4-67c0-4a21-9052-5bcc4a4bf1cb": {
@@ -70,6 +80,7 @@
         "eee211df-17ce-45dc-bcc4-d3f0e200f21f",
         "buy_buttons",
         "description",
+        "00f9dcd5-4f13-499e-ba6b-9b3c21de8cc3",
         "73d3e6f4-67c0-4a21-9052-5bcc4a4bf1cb"
       ],
       "settings": {
