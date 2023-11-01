@@ -100,3 +100,53 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   font-size:16px;
   font-weight:bold;
 }
+
+/* tooltip css */
+.i-button {
+  position: relative;
+  background: #1313f1bd;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.i-button .i-button-text {
+  visibility: hidden;
+  width: 180px;
+  background-color: #555555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 100;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+  font-style: normal;
+}
+
+.i-button .i-button-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555555 transparent transparent transparent;
+}
+
+.i-button:hover .i-button-text {
+  visibility: visible;
+  opacity: 1;
+}
+/* end tooltip */
