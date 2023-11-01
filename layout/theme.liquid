@@ -27,8 +27,10 @@
     {%- endif -%}
 
     {%- comment -%}Few prefech to increase performance on commonly used third-parties{%- endcomment -%}
+    <link rel="preload" as="style" href="{{ 'bootstrap.min.css' | asset_url }}">
     <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
     <link rel="preload" as="style" href="{{ 'custom.css' | asset_url }}">
+    <link rel="preload" as="script" href="{{ 'bootstrap.min.js' | asset_url }}">
     <link rel="preload" as="script" href="{{ 'theme.js' | asset_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com">
     <link rel="preconnect" href="https://fonts.shopifycdn.com">
@@ -96,8 +98,10 @@
     {%- endif -%}
 
     <script src="{{ 'theme.js' | asset_url }}" defer></script>
-    <script src="{{ 'bootstrap.min.js' | asset_url }}" defer></script>
     <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'bootstrap.bundle.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'bootstrap.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'tooltip.js' | asset_url }}" defer>
     <script src="{{ 'custom.js' | asset_url }}" defer></script>
 
     {%- if request.page_type != 'cart' -%}

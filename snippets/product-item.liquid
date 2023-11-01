@@ -160,6 +160,9 @@
         {%- endif -%}
       {%- endcapture -%}
 
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
+      <span>SKU:{{ current_variant.sku }}</span>
+
       {%- if settings.product_price_position == 'before_title' -%}
         {{ price_list }}
       {%- endif -%}
@@ -274,6 +277,39 @@
           <span class="product-item__inventory inventory">{{ 'collection.product.sold_out' | t }}</span>
         {%- endif -%}
       {%- endif -%}
+      <span 
+        class="d-flex justify-content-start mt-3"
+        style="color:#B0B2B3;font-weight:bold;"
+      >
+        {%- if product.metafields.custom.min_qty -%}
+          <span>
+            Min Qty:&nbsp;
+            <strong style="color:#7A7E7F">{{ product.metafields.custom.min_qty }}</strong>
+          </span>
+        {%- else -%}
+          <span>
+            Min Qty:&nbsp;<strong style="color:#7A7E7F">1</strong>
+          </span>
+        {%- endif -%}
+      </span>
+      <li class="tooltip-item" id="tooltip-1549918471566">
+        <button class="tooltip-button" type="button" value="1549918471566" aria-describedby="tooltip-overlay-1549918471566" aria-label="5, Free to use" aria-expanded="true" data-tooltip-trigger="">
+          <div class="tooltip-index" role="none">5</div>
+          <strong class="tooltip-title" role="none">Free to use</strong>
+        </button>
+        <aside class="tooltip-overlay" id="tooltip-overlay-1549918471566" data-tooltip-overlay="">
+          <strong class="tooltip-header">Free to use</strong>
+          <div class="small">
+  The code is available on <a href="https://github.com/mirceapiturca/Sections/tree/master/Tooltips" target="_blank" rel="noopener noreferrer">GitHub</a>. 
+  </div>
+        </aside>
+        <noscript data-tooltip-markup="">
+          <strong class="tooltip-header">Free to use</strong>
+          <div class="small">
+  The code is available on <a href="https://github.com/mirceapiturca/Sections/tree/master/Tooltips" target="_blank" rel="noopener noreferrer">GitHub</a>. 
+  </div>
+        </noscript>
+      </li>
     </div>
 
     {%- if request.page_type == 'collection' or request.page_type == 'search' or show_add_to_cart -%}
@@ -348,3 +384,4 @@
     {{- quick_buy_form -}}
   {%- endif -%}
 </div>
+

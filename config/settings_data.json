@@ -41,7 +41,7 @@
     "discount_mode": "percentage",
     "product_price_position": "after_title",
     "product_image_size": "short",
-    "show_color_swatch": false,
+    "show_color_swatch": true,
     "show_inventory_quantity": true,
     "low_inventory_threshold": 0,
     "cart_type": "drawer",
