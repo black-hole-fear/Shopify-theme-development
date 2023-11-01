@@ -170,7 +170,12 @@
         {{ vendor }}
       {%- endif -%}
 
-      <a href="{{ filtered_variant.url | default: product.url }}" class="product-item__title text--strong link">{{ product.title }}</a>
+      <span class="description-tooltip">
+        <a href="{{ filtered_variant.url | default: product.url }}" class="product-item__title text--strong link product-description-tooltip">{{ product.title }}</a>
+        <span class="description-tooltip-text">
+          {{ product.description }}
+        </span>
+      </span>
 
       {%- if settings.product_price_position == 'before_title' -%}
         {{ vendor }}
@@ -373,3 +378,11 @@
     {{- quick_buy_form -}}
   {%- endif -%}
 </div>
+
+{{ 'jquery.min.js' | asset_url | script_tag }}
+
+<script>
+$('.i-button').click(function() {
+  $('.i-button-text').toggleClass('show');
+});
+</script>

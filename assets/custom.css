@@ -68,7 +68,7 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
 }
 
 /* Product Details Link Button */
-.product-block-list__item--description .card__section a {
+/* .product-block-list__item--description .card__section a {
    background-color: #3f6e7c;
    color: #fff;
    font-size: 16px;
@@ -80,7 +80,7 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
 .product-block-list__item--description .card__section a:hover {
    background: #335c68;
    color: #fff;
-}
+} */
 /* End Link Button */
 
 .button-pdf {
@@ -117,7 +117,6 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
 }
 
 .i-button .i-button-text {
-  visibility: hidden;
   width: 180px;
   background-color: #555555;
   color: #fff;
@@ -130,8 +129,14 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   left: 50%;
   margin-left: -60px;
   opacity: 0;
-  transition: opacity 1s;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
   font-style: normal;
+}
+
+.i-button-text.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .i-button .i-button-text::after {
@@ -145,8 +150,41 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   border-color: #555555 transparent transparent transparent;
 }
 
-.i-button:hover .i-button-text {
+.description-tooltip {
+  position: relative;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.production-description-tooltip {
+  position: relative;
+}
+
+.description-tooltip .description-tooltip-text {
+  width: auto;
+  background-color: #ffffff;
+  color: #2e2e2e;
+  border-radius: 2px;
+  border: 1px solid #2e2e2e;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 100;
+  bottom: 100%;
+  left: 30%;
+  margin-left: -60px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 9; /* number of lines to show */
+          line-clamp: 9;
+  -webkit-box-orient: vertical;
+}
+
+.description-tooltip:hover .description-tooltip-text {
   visibility: visible;
   opacity: 1;
+  z-index: 100;
 }
-/* end tooltip */
