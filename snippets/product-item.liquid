@@ -160,6 +160,9 @@
         {%- endif -%}
       {%- endcapture -%}
 
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
+      <span>SKU:{{ current_variant.sku }}</span>
+
       {%- if settings.product_price_position == 'before_title' -%}
         {{ price_list }}
       {%- endif -%}
@@ -274,6 +277,21 @@
           <span class="product-item__inventory inventory">{{ 'collection.product.sold_out' | t }}</span>
         {%- endif -%}
       {%- endif -%}
+      <span 
+        class="d-flex justify-content-start mt-3"
+        style="color:#B0B2B3;font-weight:bold;"
+      >
+        {%- if product.metafields.custom.min_qty -%}
+          <span>
+            Min Qty:&nbsp;
+            <strong style="color:#7A7E7F">{{ product.metafields.custom.min_qty }}</strong>
+          </span>
+        {%- else -%}
+          <span>
+            Min Qty:&nbsp;<strong style="color:#7A7E7F">1</strong>
+          </span>
+        {%- endif -%}
+      </span>
     </div>
 
     {%- if request.page_type == 'collection' or request.page_type == 'search' or show_add_to_cart -%}
@@ -348,3 +366,4 @@
     {{- quick_buy_form -}}
   {%- endif -%}
 </div>
+
