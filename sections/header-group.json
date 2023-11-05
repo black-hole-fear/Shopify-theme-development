@@ -54,12 +54,27 @@
             "image_2_text": "Tell your story",
             "image_2_link": ""
           }
+        },
+        "16d92c73-04ec-46f2-8fa0-ff442dfe1762": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "All products",
+            "image_1": "shopify:\/\/shop_images\/push-clothing-2_550x_e81ff594-3671-47ef-a26b-81e53f8a66a8.webp",
+            "image_1_heading": "Clothing",
+            "image_1_text": "Clothing products for various activities",
+            "image_1_link": "#",
+            "image_2": "shopify:\/\/shop_images\/push-bags-2_550x_279aa53b-ce79-41e9-ab1a-86f7115ce62b.webp",
+            "image_2_heading": "Bag",
+            "image_2_text": "The bag you need is here!",
+            "image_2_link": ""
+          }
         }
       },
       "block_order": [
         "d27ad729-f12c-487c-9b2b-32803eddfc23",
         "fe71affb-efc0-4e02-856d-d020d7f29d8a",
-        "04c019de-ef0e-483a-bc3f-251f4740f4fe"
+        "04c019de-ef0e-483a-bc3f-251f4740f4fe",
+        "16d92c73-04ec-46f2-8fa0-ff442dfe1762"
       ],
       "settings": {
         "enable_sticky_header": true,

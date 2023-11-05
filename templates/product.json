@@ -16,7 +16,7 @@
           "type": "variant_selector",
           "settings": {
             "selector_mode": "block",
-            "color_mode": "dropdown",
+            "color_mode": "variant_image",
             "show_quantity_selector": false,
             "show_taxes_included": false,
             "show_inventory_quantity": true,
@@ -91,6 +91,18 @@
         "carousel_effect": "fade"
       }
     },
+    "6740b724-c142-40af-8b4c-200304f37558": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/9280-SldblackTB-1-BC3909SldblackTBModelFront-337W.jpg",
+        "image_position": "left",
+        "image_width": 50,
+        "title": "Your title",
+        "content": "<p>Use this text to share information about your brand with your customers.<br\/>Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "button_text": "Our products",
+        "button_link": "shopify:\/\/collections\/all"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -104,23 +116,12 @@
         "title": "Recently viewed",
         "show_quick_buy": false
       }
-    },
-    "6740b724-c142-40af-8b4c-200304f37558": {
-      "type": "image-with-text",
-      "settings": {
-        "image_position": "left",
-        "image_width": 50,
-        "title": "Your title",
-        "content": "<p>Use this text to share information about your brand with your customers.<br>Describe a product, share announcements, or welcome customers to your store.<\/p>",
-        "button_text": "Our products",
-        "button_link": "shopify:\/\/collections\/all"
-      }
     }
   },
   "order": [
     "main",
+    "6740b724-c142-40af-8b4c-200304f37558",
     "product-recommendations",
-    "recently-viewed-products",
-    "6740b724-c142-40af-8b4c-200304f37558"
+    "recently-viewed-products"
   ]
 }

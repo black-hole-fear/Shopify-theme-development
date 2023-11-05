@@ -1,0 +1,6 @@
+{% assign searchKeywords = shop.search.keywords | sort: 'count' | reverse %}
+{% assign mostSearchedCollections = collections | where: 'title', searchKeywords | limit: 5 %}
+
+{% for collection in mostSearchedCollections %}
+    <h2>{{ collection.title }}</h2>
+{% endfor %}

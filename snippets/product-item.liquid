@@ -283,16 +283,15 @@
       {%- endif -%}
       <span 
         class="d-flex justify-content-between mt-3"
-        style="color:#B0B2B3;font-weight:bold;"
       >
         {%- if product.metafields.custom.min_qty -%}
           <span>
-            Min Qty:&nbsp;
+            Min Qty:
             <strong style="color:#7A7E7F">{{ product.metafields.custom.min_qty }}</strong>
           </span>
         {%- else -%}
           <span>
-            Min Qty:&nbsp;<strong style="color:#7A7E7F">1</strong>
+            Min Qty:<strong style="color:#7A7E7F">1</strong>
           </span>
         {%- endif -%}
         {% comment %} <div data-tooltip="{{ product.metafields.custom.detail_button_content }}">
@@ -382,10 +381,10 @@
 {{ 'jquery.min.js' | asset_url | script_tag }}
 
 <script>
-$('.i-button').click(function() {
+{% comment %} $('.i-button').click(function() {
   $('.i-button-text').toggleClass('show');
 });
 $('.i-button').mouseout(function() {
   $('.i-button-text').removeClass('show');
-});
+}); {% endcomment %}
 </script>

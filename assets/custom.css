@@ -126,7 +126,7 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   position: absolute;
   z-index: 100;
   bottom: 150%;
-  left: 50%;
+  left: -80px;
   margin-left: -60px;
   opacity: 0;
   visibility: hidden;
@@ -143,11 +143,16 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   content: "";
   position: absolute;
   top: 100%;
-  left: 30%;
+  left: 80%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: #555555 transparent transparent transparent;
+}
+
+.i-button:hover .i-button-text {
+  visibility: visible;
+  opacity: 1;
 }
 
 .description-tooltip {

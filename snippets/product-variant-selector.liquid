@@ -172,10 +172,10 @@
             {%- endif -%}
           </span>
         {%- endif -%}
-        <span style="font-size:20px;color:#B0B2B3;font-weight:bold;">
-        From {{ product.price_min | money }} to {{ product.price_max | money }}
-        </span>
       </div>
+      <span style="display:flex;justify-content:flex-end;font-size:20px;color:#B0B2B3;font-weight:bold;">
+      From {{ product.price_min | money }} to {{ product.price_max | money }}
+      </span>
 
       <div class="product-form__price-info" style="display: {% if selected_variant.unit_price_measurement %}block{% else %}none{% endif %}">
         <div class="unit-price-measurement">
