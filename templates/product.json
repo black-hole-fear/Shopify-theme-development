@@ -32,6 +32,7 @@
         },
         "24bd4013-1dfd-46f8-bb36-c03542d4d089": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "content": "<p>Min Qty: <strong>{{ product.metafields.custom.min_qty.value }}<\/strong><\/p>"
           }
