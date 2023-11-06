@@ -313,9 +313,10 @@
           From {{ product.price_min | money }}
         </span>
         <div class="d-flex align-items-center">
-          <div class="i-button">i
+          <div class="i-button">
+            <span style="font-weight:bold;font-style:italic;">i</span>
             {% if product.metafields.custom.detail_button_content %}
-            <span class="i-button-text">{{ product.metafields.custom.detail_button_content }}</span>
+            <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
             {% endif %}
           </div>
         </div>

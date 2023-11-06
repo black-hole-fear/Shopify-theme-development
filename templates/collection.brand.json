@@ -18,6 +18,17 @@
         "open_group_filters_mode": "all_open"
       }
     },
+    "1e8c8966-c8bf-4351-b8a7-7ac8ed4ada1d": {
+      "type": "image-with-text",
+      "settings": {
+        "image_position": "left",
+        "image_width": 50,
+        "title": "Your title",
+        "content": "<p>Use this text to share information about your brand with your customers.<br\/>Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "button_text": "Our products",
+        "button_link": "shopify:\/\/collections\/all"
+      }
+    },
     "recently-viewed-products": {
       "type": "recently-viewed-products",
       "settings": {
@@ -28,6 +39,7 @@
   },
   "order": [
     "main",
+    "1e8c8966-c8bf-4351-b8a7-7ac8ed4ada1d",
     "recently-viewed-products"
   ]
 }
