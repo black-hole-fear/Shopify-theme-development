@@ -193,3 +193,8 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   opacity: 1;
   z-index: 100;
 }
+
+.swatch-list-inactive {
+  height: 55px;
+  overflow-y: hidden;
+}

@@ -39,11 +39,16 @@
       <div class="product-form__option" data-selector-type="{{ option_selector_type }}">
         {%- case option_selector_type -%}
           {%- when 'color' -%}
-            <span class="product-form__option-name text--strong">{{ option.name }}: <span class="product-form__selected-value">{{ option.selected_value }}</span></span>
-
-            <div class="color-swatch-list color-swatch-list--large">
+            <div class="d-flex justify-content-between">
+              <span class="product-form__option-name text--strong">{{ option.name }}: <span class="product-form__selected-value">{{ option.selected_value }}</span></span>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label" for="flexSwitchCheckChecked">Color swatch</label>
+              </div>
+            </div>
+            <div class="color-swatch-list color-swatch-list--large swatch-list">
               {%- assign color_swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
-
+              
               {%- for value in option.values -%}
                 {%- assign downcased_value = value | downcase -%}
                 {%- capture color_id -%}{{ option_name }}-{{ forloop.index }}{%- endcapture -%}
@@ -277,3 +282,13 @@
     {%- endif -%}
   {%- endif -%}
 </div>
+
+{{ 'jquery.min.js' | asset_url | script_tag }}
+
+<script>
+$(document).ready(function() {
+  $('#flexSwitchCheckChecked').on('change', function () {
+    $('.swatch-list').toggleClass('swatch-list-inactive');
+  });
+});
+</script>

@@ -18,14 +18,13 @@
 
           {%- when 'buy_buttons' -%}
             {%- render 'product-buy-buttons', product: product, form: form, block: block -%}
-
+{% comment %} 
           {%- when 'text' -%}
             {%- if block.settings.content != blank -%}
               <div class="product-meta__text rte min-qty" style="margin-bottom:10px;" {{ block.shopify_attributes }}>
                 {{- block.settings.content -}} 
               </div>
-            </div>
-            {%- endif -%}
+            {%- endif -%} {% endcomment %}
 
           {%- when 'button' -%}
             {%- if block.settings.text != blank -%}
@@ -37,6 +36,7 @@
                 >
                   {{ block.settings.text | escape }}
                 </a>
+              </div>
             {%- endif -%}
 
           {%- when 'store_pickup' -%}
