@@ -172,9 +172,9 @@
 
       <span class="description-tooltip">
         <a href="{{ filtered_variant.url | default: product.url }}" class="product-item__title text--strong link product-description-tooltip">{{ product.title }}</a>
-        <span class="description-tooltip-text">
+        {% comment %} <span class="description-tooltip-text">
           {{ product.description }}
-        </span>
+        </span> {% endcomment %}
       </span>
 
       {%- if settings.product_price_position == 'before_title' -%}
