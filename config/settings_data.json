@@ -44,10 +44,10 @@
     "show_color_swatch": true,
     "show_inventory_quantity": true,
     "low_inventory_threshold": 0,
-    "cart_type": "drawer",
+    "cart_type": "page",
     "cart_empty_button_link": "shopify:\/\/collections\/all",
     "cart_show_checkout_button": true,
-    "cart_show_free_shipping_threshold": false,
+    "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": "50",
     "social_facebook": "",
     "social_twitter": "",
@@ -78,7 +78,27 @@
     "share_image": "",
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "6097499278999377719": {
+        "type": "shopify:\/\/apps\/globo-mega-menu\/blocks\/app-embed\/7a00835e-fe40-45a5-a615-2eb4ab697b58",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "4571859552318407796": {
+        "type": "shopify:\/\/apps\/globo-color-swatch\/blocks\/app-embed-block\/4394f710-096c-4021-bbde-8ebb26057c11",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "3720565183479497137": {
+        "type": "shopify:\/\/apps\/globo-product-options-variant\/blocks\/app-embed-block\/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+        "disabled": true,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Metal": {

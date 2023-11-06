@@ -104,16 +104,22 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
 /* tooltip css */
 .i-button {
   position: relative;
-  background: #1313f1bd;
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #1313f1db;
   border-radius: 50%;
+  border: 1px solid #1313f1;
   font-style: italic;
+  font-weight: bold;
   cursor: pointer;
+}
+
+.i-button:hover {
+  background: #1313f1bd;
+  color: white;
 }
 
 .i-button .i-button-text {

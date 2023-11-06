@@ -61,7 +61,7 @@
   <div class="product-item__info">
     <div class="product-item__info-inner">
       {%- capture price_list -%}
-        <div class="product-item__price-list price-list">
+        {% comment %} <div class="product-item__price-list price-list">
           {%- if product.price < product.compare_at_price -%}
             {%- if product.price_varies -%}
               {%- if settings.currency_code_enabled -%}
@@ -129,8 +129,7 @@
               {%- endif -%}
             </span>
           {%- endif -%}
-        </div>
-
+        </div> {% endcomment %}
         {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
           <div class="product-item__price-info">
             <div class="unit-price-measurement">
@@ -281,26 +280,44 @@
           <span class="product-item__inventory inventory">{{ 'collection.product.sold_out' | t }}</span>
         {%- endif -%}
       {%- endif -%}
-      <span 
-        class="d-flex justify-content-between mt-3"
-      >
-        {%- if product.metafields.custom.min_qty -%}
-          <span>
-            Min Qty:
-            <strong style="color:#7A7E7F">{{ product.metafields.custom.min_qty }}</strong>
-          </span>
-        {%- else -%}
-          <span>
-            Min Qty:<strong style="color:#7A7E7F">1</strong>
-          </span>
-        {%- endif -%}
-        {% comment %} <div data-tooltip="{{ product.metafields.custom.detail_button_content }}">
-          <button>i</button>
-        </div> {% endcomment %}
-        <div class="i-button">i
-          {% if product.metafields.custom.detail_button_content %}
-          <span class="i-button-text">{{ product.metafields.custom.detail_button_content }}</span>
+
+      {% for variant in product.variants %}
+        {% if variant.available %}
+            {% assign pro_size = variant.option1 | strip %}
+            {% assign variant_sizes = variant_sizes | append: pro_size | append: ',' %}
+        {% endif %}
+      {% endfor %}
+      {% assign variant_sizes = variant_sizes | split: ',' | uniq %}
+      {% assign variant_lengths = variant_sizes.size %}
+
+      {%- if product.metafields.custom.min_qty -%}
+        <span class="d-flex justify-content-center mt-1">
+          {% if variant_lengths > 0 %}
+            <span>{{ variant_sizes[0] }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
+          {% else %}
+            <span>No Size | Min Qty: {{ product.metafields.custom.min_qty }}</span>
           {% endif %}
+        </span>
+      {%- else -%}
+        <span class="d-flex justify-content-center mt-1">
+          {% if variant_lengths > 0 %}
+            <span>{{ variant_sizes[0] }} | No Minimum</span>
+          {% else %}
+            <span>No Size | No Minimum</span>
+          {% endif %}
+        </span>
+      {%- endif -%}
+
+      <span class="d-flex justify-content-between mt-1">
+        <span style="display:flex;justify-content:flex-start;">
+          From {{ product.price_min | money }}
+        </span>
+        <div class="d-flex align-items-center">
+          <div class="i-button">i
+            {% if product.metafields.custom.detail_button_content %}
+            <span class="i-button-text">{{ product.metafields.custom.detail_button_content }}</span>
+            {% endif %}
+          </div>
         </div>
       </span>
     </div>
