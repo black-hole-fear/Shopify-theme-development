@@ -21,8 +21,9 @@
     "1e8c8966-c8bf-4351-b8a7-7ac8ed4ada1d": {
       "type": "image-with-text",
       "settings": {
+        "image": "shopify:\/\/shop_images\/experts-f2f35146aca0bbbb0556663c7228874ff88a23f0abbec6e7c0b87e62d7e9519e.jpg",
         "image_position": "left",
-        "image_width": 50,
+        "image_width": 40,
         "title": "Your title",
         "content": "<p>Use this text to share information about your brand with your customers.<br\/>Describe a product, share announcements, or welcome customers to your store.<\/p>",
         "button_text": "Our products",
