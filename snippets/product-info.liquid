@@ -29,8 +29,8 @@
           {%- when 'button' -%}
             {%- if block.settings.text != blank -%}
               <div class="d-flex flex-row-reverse justify-content-between align-items-center">
-                <a 
-                  href="{{ block.settings.link }}" 
+                <a
+                  href="{{ block.settings.link | replace: "***", product.metafields.custom.odoo_id }}" 
                   class="product-meta__button button button--primary button-pdf" 
                   {{ block.shopify_attributes }}
                 >
@@ -57,6 +57,20 @@
             {%- render block -%}
         {%- endcase -%}
       {%- endfor -%}
+
+      {% assign file_object = product.metafields.custom.guide.value %} 
+      {% if file_object != blank %} 
+      <div class = "file-reference">
+        {% assign file_url = file_object.url %}
+        {% assign file_name_with_shopify_extension = file_url | split: '/' | last %} <!-- parse the file name from the URL -->
+        {% assign file_name = file_name_with_shopify_extension | split: '?' | first %} <!-- strip off the ?v=123456789 part of the file name -->
+        <a href = "{{file_url}}" target="_blank">
+          <div class = "file-name">
+          {{ file_name }}
+        </div>
+        </a> 
+      </div>
+      {% endif %}
 
       {%- assign product_meta_block = section.blocks | where: 'type', 'product_meta' | first -%}
 

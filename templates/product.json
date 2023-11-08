@@ -26,15 +26,8 @@
         "63509649-6bd6-4baf-a630-f439c0f5ba96": {
           "type": "button",
           "settings": {
-            "text": "Click here for manual",
+            "text": "Presentation",
             "link": "{{ product.metafields.custom.pdf_link.value }}"
-          }
-        },
-        "24bd4013-1dfd-46f8-bb36-c03542d4d089": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "content": "<p>Min Qty: <strong>{{ product.metafields.custom.min_qty.value }}<\/strong><\/p>"
           }
         },
         "eee211df-17ce-45dc-bcc4-d3f0e200f21f": {
@@ -54,6 +47,23 @@
           "type": "description",
           "settings": {
             "display_mode": "view_more"
+          }
+        },
+        "c281c06a-e1d1-429c-acf1-d9fd6cd3b0a3": {
+          "type": "content",
+          "settings": {
+            "title": "Delivery Information",
+            "content": "{{ product.metafields.custom.delivery_information | metafield_tag }}",
+            "page": "",
+            "display_mode": "view_more"
+          }
+        },
+        "e89d3d4a-a2bd-4fce-8072-e9fe3cb798f0": {
+          "type": "liquid",
+          "settings": {
+            "title": "Supporting Documents",
+            "liquid": "{{ product.metafields.custom.dynamic_pdf_files.value | json }}",
+            "display_mode": "show_all"
           }
         },
         "00f9dcd5-4f13-499e-ba6b-9b3c21de8cc3": {
@@ -77,10 +87,11 @@
         "product_meta",
         "variant_selector",
         "63509649-6bd6-4baf-a630-f439c0f5ba96",
-        "24bd4013-1dfd-46f8-bb36-c03542d4d089",
         "eee211df-17ce-45dc-bcc4-d3f0e200f21f",
         "buy_buttons",
         "description",
+        "c281c06a-e1d1-429c-acf1-d9fd6cd3b0a3",
+        "e89d3d4a-a2bd-4fce-8072-e9fe3cb798f0",
         "00f9dcd5-4f13-499e-ba6b-9b3c21de8cc3",
         "73d3e6f4-67c0-4a21-9052-5bcc4a4bf1cb"
       ],
@@ -97,9 +108,9 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/9280-SldblackTB-1-BC3909SldblackTBModelFront-337W.jpg",
         "image_position": "left",
-        "image_width": 50,
+        "image_width": 20,
         "title": "Your title",
-        "content": "<p>Use this text to share information about your brand with your customers.<br\/>Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "content": "<p>Introducing the Ultimate Black Hoodie: Elevate Your Wardrobe with Timeless Sophistication<\/p>",
         "button_text": "Our products",
         "button_link": "shopify:\/\/collections\/all"
       }
