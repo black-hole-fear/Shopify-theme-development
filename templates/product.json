@@ -62,7 +62,7 @@
           "type": "liquid",
           "settings": {
             "title": "Decoration",
-            "liquid": "{% assign decoration_object = product.metafields.custom.decoration.value | json %}\n{% if decoration_object != blank %}\n<img src={{decoration_object | remove: \"\\\"}} class=\"img-fluid\" alt=\"Responsive image\">\n{% endif %}",
+            "liquid": "{% assign decoration_object = product.metafields.custom.decoration.value | json %}\n{% assign decoration_url = decoration_object | remove: \"\\\" %}\n{% if decoration_url != \"null\" %}\n<img src={{ decoration_url }} class=\"img-fluid\" alt=\"Responsive image\">\n{% endif %}",
             "display_mode": "show_all"
           }
         },
@@ -71,7 +71,7 @@
           "settings": {
             "title": "Supporting Documents",
             "liquid": "{% assign data =  product.metafields.custom.dynamic_pdf_files.value | json_parse %}\n\n{% for json_data in data %}\n  {% assign object = json_data | json_parse %}\n  {% assign spec_file_object = object.spec_sheet.value %}\n  <a href=\"{{spec_file_object.url}}\" targe=\"_blank\">\n    <div class=\"file-name\">\nSpec Sheet Document<\/div>\n  <\/a>\n\n{% assign measurement_file_object = object.product_measurements.value %}\n  <a href=\"{{measurement_file_object.url}}\" targe=\"_blank\">\n    <div class=\"file-name\">\nProduct measurements document<\/div>\n  <\/a>\n\n{% assign decoration_file_object = object.decoration_spec_sheet.value %}\n  <a href=\"{{decoration_file_object.url}}\" targe=\"_blank\">\n    <div class=\"file-name\">\nDecoration spec sheet document<\/div>\n  <\/a>\n{% endfor %}",
-            "display_mode": "show_all"
+            "display_mode": "collapse"
           }
         },
         "00f9dcd5-4f13-499e-ba6b-9b3c21de8cc3": {

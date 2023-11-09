@@ -11,11 +11,23 @@
         "default_view_layout": "grid",
         "show_quick_buy": "list",
         "show_quick_view": "list",
-        "quick_links": "",
+        "quick_links": "product-category",
         "quick_links_show_products_count": true,
         "show_filters": true,
         "show_filter_color_swatch": true,
         "open_group_filters_mode": "all_open"
+      }
+    },
+    "404a7f13-1fa7-40bd-ad49-c519be0c827e": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/experts-f2f35146aca0bbbb0556663c7228874ff88a23f0abbec6e7c0b87e62d7e9519e.jpg",
+        "image_position": "left",
+        "image_width": 25,
+        "title": "Your title",
+        "content": "<p>Use this text to share information about your brand with your customers.<br\/>Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "button_text": "Our products",
+        "button_link": "shopify:\/\/collections\/all"
       }
     },
     "recently-viewed-products": {
@@ -28,6 +40,7 @@
   },
   "order": [
     "main",
+    "404a7f13-1fa7-40bd-ad49-c519be0c827e",
     "recently-viewed-products"
   ]
 }
