@@ -232,6 +232,12 @@
         {{ price_list }}
       {%- endif -%}
 
+      <span class="d-flex justify-content-between mt-1">
+        <span style="display:flex;justify-content:flex-start;color:red;font-size:20px;">
+          From {{ product.price_min | money }}
+        </span>
+      </span>
+
       {%- if settings.show_reviews_badge -%}
         <a class="product-item__reviews-badge link" href="{{ product.url }}#product-reviews">
           {%- render 'product-rating', product: product -%}
@@ -331,11 +337,6 @@
         </span>
       {%- endif -%}
 
-      <span class="d-flex justify-content-between mt-1">
-        <span style="display:flex;justify-content:flex-start;">
-          From {{ product.price_min | money }}
-        </span>
-      </span>
     </div>
 
     {%- if request.page_type == 'collection' or request.page_type == 'search' or show_add_to_cart -%}
