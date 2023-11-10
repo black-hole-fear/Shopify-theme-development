@@ -25,9 +25,10 @@
         },
         "63509649-6bd6-4baf-a630-f439c0f5ba96": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "text": "Presentation",
-            "link": "{{ product.metafields.custom.pdf_link.value }}"
+            "link": "{{ product.metafields.custom.presentation.value }}"
           }
         },
         "eee211df-17ce-45dc-bcc4-d3f0e200f21f": {
@@ -53,24 +54,34 @@
           "type": "content",
           "settings": {
             "title": "Delivery Information",
-            "content": "{{ product.metafields.custom.delivery_information | metafield_tag }}",
+            "content": "<p><strong>Delivery leadtime: <\/strong>{{ product.metafields.custom.delivery_leadtime.value }}<\/p><p><strong>Delivery packaging:<\/strong>{{ product.metafields.custom.delivery_packaging.value }}<\/p><p><strong>Delivery policy:<\/strong>{{ product.metafields.custom.delivery_information | metafield_tag }}<\/p>",
             "page": "",
-            "display_mode": "view_more"
+            "display_mode": "collapse"
           }
         },
         "1181262e-e068-47fd-b6de-9f98b0b09dce": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
-            "title": "Decoration",
+            "title": "Decoration Picture",
             "liquid": "{% assign decoration_object = product.metafields.custom.decoration.value | json %}\n{% assign decoration_url = decoration_object | remove: \"\\\" %}\n{% if decoration_url != \"null\" %}\n<img src={{ decoration_url }} class=\"img-fluid\" alt=\"Responsive image\">\n{% endif %}",
             "display_mode": "show_all"
+          }
+        },
+        "cd894211-3ad7-4da7-8c19-a75d8be6fd4c": {
+          "type": "content",
+          "settings": {
+            "title": "Decoration",
+            "content": "<p><strong>Price Includes: <\/strong>{{ product.metafields.custom.decoration_price_includes | metafield_tag }}<\/p><p><strong>Decoration Method:<\/strong> {{ product.metafields.custom.decoration_method.value }}<\/p><p><strong>Imprint Size: <\/strong>{{ product.metafields.custom.decoration_imprint_size | metafield_tag }}<\/p><p><strong>Extra color\/location: <\/strong>{{ product.metafields.custom.decoration_extra_color_location | metafield_tag }}<\/p><p><strong>Product Options: <\/strong>{{ product.metafields.custom.decoration_product_options | metafield_tag }}<\/p><p><strong>Setup fee(G): <\/strong>{{ product.metafields.custom.decoration_setup_fee | metafield_tag }}<\/p>",
+            "page": "",
+            "display_mode": "collapse"
           }
         },
         "e89d3d4a-a2bd-4fce-8072-e9fe3cb798f0": {
           "type": "liquid",
           "settings": {
             "title": "Supporting Documents",
-            "liquid": "{% assign data =  product.metafields.custom.dynamic_pdf_files.value | json_parse %}\n\n{% for json_data in data %}\n  {% assign object = json_data | json_parse %}\n  {% assign spec_file_object = object.spec_sheet.value %}\n  <a href=\"{{spec_file_object.url}}\" targe=\"_blank\">\n    <div class=\"file-name\">\nSpec Sheet Document<\/div>\n  <\/a>\n\n{% assign measurement_file_object = object.product_measurements.value %}\n  <a href=\"{{measurement_file_object.url}}\" targe=\"_blank\">\n    <div class=\"file-name\">\nProduct measurements document<\/div>\n  <\/a>\n\n{% assign decoration_file_object = object.decoration_spec_sheet.value %}\n  <a href=\"{{decoration_file_object.url}}\" targe=\"_blank\">\n    <div class=\"file-name\">\nDecoration spec sheet document<\/div>\n  <\/a>\n{% endfor %}",
+            "liquid": "{% assign data =  product.metafields.custom.dynamic_pdf_files.value | json_parse %}\n\n  <a href=\"{{ product.metafields.custom.specs_sheet | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nSpecs sheet<\/div>\n  <\/a>\n\n<a href=\"{{ product.metafields.custom.product_measurements_document | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nProduct measurements document<\/div>\n  <\/a>\n\n<a href=\"{{ product.metafields.custom.decoration_spec_sheet_document | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nDecoration spec sheet document<\/div>\n  <\/a>\n\n  <a href=\"{{ product.metafields.custom.presentation | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nPresentation<\/div>\n  <\/a>",
             "display_mode": "collapse"
           }
         },
@@ -80,7 +91,7 @@
             "title": "Care Guide",
             "content": "<p>{{ product.metafields.descriptors.care_guide | metafield_tag }}<\/p>",
             "page": "",
-            "display_mode": "show_all"
+            "display_mode": "collapse"
           }
         },
         "73d3e6f4-67c0-4a21-9052-5bcc4a4bf1cb": {
@@ -100,6 +111,7 @@
         "description",
         "c281c06a-e1d1-429c-acf1-d9fd6cd3b0a3",
         "1181262e-e068-47fd-b6de-9f98b0b09dce",
+        "cd894211-3ad7-4da7-8c19-a75d8be6fd4c",
         "e89d3d4a-a2bd-4fce-8072-e9fe3cb798f0",
         "00f9dcd5-4f13-499e-ba6b-9b3c21de8cc3",
         "73d3e6f4-67c0-4a21-9052-5bcc4a4bf1cb"

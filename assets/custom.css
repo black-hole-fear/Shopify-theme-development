@@ -124,9 +124,8 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   width: 230px;
   background-color: #555555;
   color: #fff;
-  text-align: center;
   border-radius: 6px;
-  padding: 5px 5px;
+  padding: 5px 10px;
   position: absolute;
   z-index: 100;
   bottom: 150%;
@@ -136,6 +135,10 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   visibility: hidden;
   transition: opacity 1s ease-in-out;
   z-index: 999;
+}
+
+.i-button-text p {
+  margin-bottom: 0;
 }
 
 .i-button-text.show {

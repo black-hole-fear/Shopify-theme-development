@@ -160,7 +160,6 @@
       {%- endcapture -%}
 
       {%- assign current_variant = product.selected_or_first_available_variant -%}
-      <span>SKU:{{ current_variant.sku }}</span>
       {%- if settings.product_price_position == 'before_title' -%}
         {{ price_list }}
       {%- endif -%}
@@ -292,8 +291,8 @@
 
       {%- if product.metafields.custom.min_qty -%}
         <span class="d-flex justify-content-center mt-1">
-          {% if variant_lengths > 0 %}
-            {% if variant_lengths == 1 %}
+          {% if product.options[0] == 'Size' %}
+            {% if product.options[0] == 1 %}
               <span>{{ variant_sizes[0] }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
             {% else %}
               <span>{{ variant_sizes[0] }}-{{ variant_sizes | last }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
@@ -301,18 +300,34 @@
           {% else %}
             <span>No Size | Min Qty: {{ product.metafields.custom.min_qty }}</span>
           {% endif %}
+          &nbsp;<div class="d-flex align-items-center">
+            <div class="i-button">
+              <span style="font-weight:bold;font-style:italic;">i</span>
+              {% if product.metafields.custom.detail_button_content %}
+              <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
+              {% endif %}
+            </div>
+          </div>
         </span>
       {%- else -%}
         <span class="d-flex justify-content-center mt-1">
-          {% if variant_lengths > 0 %}
+          {% if product.options[0] == 'Size' %}
             {% if variant_lengths == 1 %}
-              <span>{{ variant_sizes[0] }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
+              <span>{{ variant_sizes[0] }} | No minimum</span>
             {% else %}
-              <span>{{ variant_sizes[0] }}-{{ variant_sizes | last }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
+              <span>{{ variant_sizes[0] }}-{{ variant_sizes | last }} | No minimum</span>
             {% endif %}
           {% else %}
             <span>No Size | No Minimum</span>
           {% endif %}
+          &nbsp;<div class="d-flex align-items-center">
+            <div class="i-button">
+              <span style="font-weight:bold;font-style:italic;">i</span>
+              {% if product.metafields.custom.detail_button_content %}
+              <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
+              {% endif %}
+            </div>
+          </div>
         </span>
       {%- endif -%}
 
@@ -320,14 +335,6 @@
         <span style="display:flex;justify-content:flex-start;">
           From {{ product.price_min | money }}
         </span>
-        <div class="d-flex align-items-center">
-          <div class="i-button">
-            <span style="font-weight:bold;font-style:italic;">i</span>
-            {% if product.metafields.custom.detail_button_content %}
-            <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
-            {% endif %}
-          </div>
-        </div>
       </span>
     </div>
 
