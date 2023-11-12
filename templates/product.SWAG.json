@@ -25,10 +25,9 @@
         },
         "63509649-6bd6-4baf-a630-f439c0f5ba96": {
           "type": "button",
-          "disabled": true,
           "settings": {
-            "text": "Presentation",
-            "link": "{{ product.metafields.custom.presentation.value }}"
+            "text": "Price Break",
+            "link": "{{ product.metafields.custom.link2file.value }}"
           }
         },
         "eee211df-17ce-45dc-bcc4-d3f0e200f21f": {
@@ -81,7 +80,7 @@
           "type": "liquid",
           "settings": {
             "title": "Supporting Documents",
-            "liquid": "{% assign data =  product.metafields.custom.dynamic_pdf_files.value | json_parse %}\n\n  <a href=\"{{ product.metafields.custom.specs_sheet | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nSpecs sheet<\/div>\n  <\/a>\n\n<a href=\"{{ product.metafields.custom.product_measurements_document | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nProduct measurements document<\/div>\n  <\/a>\n\n<a href=\"{{ product.metafields.custom.decoration_spec_sheet_document | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nDecoration spec sheet document<\/div>\n  <\/a>\n\n  <a href=\"{{ product.metafields.custom.presentation | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nPresentation<\/div>\n  <\/a>\n\n{% for collection in product.collections%}\n  {% if collection.title contains 'apparel' %}\n    {% assign isApparel = true %}\n  {% endif %}\n{% endfor %}\n\n{% if isApparel %}\n<a href=\"{{ product.metafields.custom.care_guide_link| replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nCare guide<\/div>\n  <\/a>\n{% endif %}",
+            "liquid": "{% assign data =  product.metafields.custom.dynamic_pdf_files.value | json_parse %}\n\n  <a href=\"{{ product.metafields.custom.specs_sheet | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nSpecs sheet<\/div>\n  <\/a>\n\n<a href=\"{{ product.metafields.custom.product_measurements_document | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nProduct measurements document<\/div>\n  <\/a>\n\n<a href=\"{{ product.metafields.custom.decoration_spec_sheet_document | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nDecoration spec sheet document<\/div>\n  <\/a>\n\n  <a href=\"{{ product.metafields.custom.presentation | replace: \"***\", product.metafields.custom.odoo_id }}\" targe=\"_blank\">\n    <div class=\"file-name\">\nPresentation<\/div>\n  <\/a>",
             "display_mode": "collapse"
           }
         },

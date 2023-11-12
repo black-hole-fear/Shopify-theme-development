@@ -298,10 +298,14 @@
       {%- if product.metafields.custom.min_qty -%}
         <span class="d-flex justify-content-center mt-1">
           {% if product.options[0] == 'Size' %}
-            {% if product.options[0] == 1 %}
+            {% if variant_lengths == 1 %}
               <span>{{ variant_sizes[0] }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
-            {% else %}
-              <span>{{ variant_sizes[0] }}-{{ variant_sizes | last }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
+            {% elsif variant_lengths == 2 %}
+              <span>{{ variant_sizes[0] }},&nbsp;{{ variant_sizes[1] }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
+            {% elsif variant_lengths > 2 %}
+              <span>
+                {{ variant_sizes[0] }},&nbsp;{{ variant_sizes | last }} etc. | Min Qty: {{ product.metafields.custom.min_qty }}
+              </span>
             {% endif %}
           {% else %}
             <span>No Size | Min Qty: {{ product.metafields.custom.min_qty }}</span>
@@ -320,8 +324,10 @@
           {% if product.options[0] == 'Size' %}
             {% if variant_lengths == 1 %}
               <span>{{ variant_sizes[0] }} | No minimum</span>
-            {% else %}
-              <span>{{ variant_sizes[0] }}-{{ variant_sizes | last }} | No minimum</span>
+            {% elsif variant_lengths == 2 %}
+              <span>{{ variant_sizes[0] }},&nbsp;{{ variant_sizes[1] }} | No minimum</span>
+            {% elsif variant_lengths > 2 %}
+              <span>{{ variant_sizes[0] }},&nbsp;{{ variant_sizes | last }} etc. | No minimum</span>
             {% endif %}
           {% else %}
             <span>No Size | No Minimum</span>
