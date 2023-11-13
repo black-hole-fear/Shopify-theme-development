@@ -205,3 +205,12 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
   height: 55px;
   overflow-y: hidden;
 }
+
+a.product-item__vendor {
+  margin-bottom: 0;
+  font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 14px));
+}
+
+.product-item__info-inner span {
+  font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 14px));
+}

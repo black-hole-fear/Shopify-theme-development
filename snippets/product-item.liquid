@@ -151,6 +151,8 @@
           {%- assign vendor_handle = product.vendor | handle -%}
           {%- assign collection_for_vendor = collections[vendor_handle] -%}
 
+          <h6 style="font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 14px));
+            margin-bottom: 0;">SKU: {{ product.selected_or_first_available_variant.sku }}</h6>
           {%- unless collection_for_vendor.empty? -%}
             <a class="product-item__vendor link" href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
           {%- else -%}
@@ -296,43 +298,93 @@
       {% assign variant_lengths = variant_sizes.size %}
 
       {%- if product.metafields.custom.min_qty -%}
-        <span class="d-flex justify-content-center mt-1">
+        <span class="mt-1">
           {% if product.options[0] == 'Size' %}
             {% if variant_lengths == 1 %}
-              <span>{{ variant_sizes[0] }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
+              <span>
+                <strong>Size: </strong>
+                {{ variant_sizes[0] }}
+              </span><br>
+              <span class="d-flex justify-content-between">
+                <span><strong>Min Qty: </strong>
+                {{ product.metafields.custom.min_qty }}</span>
+                <div class="d-flex justify-self-end align-items-center">
+                  <div class="i-button">
+                    <span style="font-weight:bold;font-style:italic;">i</span>
+                    {% if product.metafields.custom.detail_button_content %}
+                    <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
+                    {% endif %}
+                  </div>
+                </div>
+              </span>
             {% elsif variant_lengths == 2 %}
-              <span>{{ variant_sizes[0] }},&nbsp;{{ variant_sizes[1] }} | Min Qty: {{ product.metafields.custom.min_qty }}</span>
+              <span>
+                <strong>Size: </strong>
+                {{ variant_sizes[0] }}, {{ variant_sizes[1] }}
+              </span><br>
+              <span class="d-flex justify-content-between">
+                <span><strong>Min Qty: </strong>
+                {{ product.metafields.custom.min_qty }}</span>
+                <div class="d-flex align-items-center">
+                  <div class="i-button">
+                    <span style="font-weight:bold;font-style:italic;">i</span>
+                    {% if product.metafields.custom.detail_button_content %}
+                    <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
+                    {% endif %}
+                  </div>
+                </div>
+              </span>
             {% elsif variant_lengths > 2 %}
               <span>
-                {{ variant_sizes[0] }},&nbsp;{{ variant_sizes | last }} etc. | Min Qty: {{ product.metafields.custom.min_qty }}
+                <span><strong>Size: </strong>
+                {{ variant_sizes[0] }}, {{ variant_sizes[1] }}, {{ variant_sizes | last }}</span>
+              </span> <br>
+              <span class="d-flex justify-content-between">
+                <span>
+                  <strong>Min Qty: </strong>
+                  {{ product.metafields.custom.min_qty }}
+                </span>
+                <div class="d-flex align-items-center">
+                  <div class="i-button">
+                    <span style="font-weight:bold;font-style:italic;">i</span>
+                    {% if product.metafields.custom.detail_button_content %}
+                    <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
+                    {% endif %}
+                  </div>
+                </div>
               </span>
             {% endif %}
           {% else %}
-            <span>No Size | Min Qty: {{ product.metafields.custom.min_qty }}</span>
+            <span class="d-flex justify-content-between">
+              <span>
+                <strong>Min Qty: </strong>
+                {{ product.metafields.custom.min_qty }}
+              </span>
+              <div class="d-flex align-items-center">
+                <div class="i-button">
+                  <span style="font-weight:bold;font-style:italic;">i</span>
+                  {% if product.metafields.custom.detail_button_content %}
+                  <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
+                  {% endif %}
+                </div>
+              </div>
+            </span>
           {% endif %}
-          &nbsp;<div class="d-flex align-items-center">
-            <div class="i-button">
-              <span style="font-weight:bold;font-style:italic;">i</span>
-              {% if product.metafields.custom.detail_button_content %}
-              <span class="i-button-text">{{ product.metafields.custom.detail_button_content | metafield_tag }}</span>
-              {% endif %}
-            </div>
-          </div>
         </span>
       {%- else -%}
-        <span class="d-flex justify-content-center mt-1">
+        <span class="d-flex justify-content-between mt-1">
           {% if product.options[0] == 'Size' %}
             {% if variant_lengths == 1 %}
-              <span>{{ variant_sizes[0] }} | No minimum</span>
+              <span><strong>Size:</strong>{{ variant_sizes[0] }}</span>
             {% elsif variant_lengths == 2 %}
-              <span>{{ variant_sizes[0] }},&nbsp;{{ variant_sizes[1] }} | No minimum</span>
+              <span><strong>Size:</strong>{{ variant_sizes[0] }}, {{ variant_sizes[1] }}</span>
             {% elsif variant_lengths > 2 %}
-              <span>{{ variant_sizes[0] }},&nbsp;{{ variant_sizes | last }} etc. | No minimum</span>
+              <span><strong>Size:</strong>{{ variant_sizes[0] }}, {{ variant_sizes[1] }}, {{ variant_sizes | last }}</span>
             {% endif %}
           {% else %}
-            <span>No Size | No Minimum</span>
+            <span></span>
           {% endif %}
-          &nbsp;<div class="d-flex align-items-center">
+          <div class="d-flex align-items-center">
             <div class="i-button">
               <span style="font-weight:bold;font-style:italic;">i</span>
               {% if product.metafields.custom.detail_button_content %}
