@@ -18,25 +18,24 @@
 
           {%- when 'buy_buttons' -%}
             {%- render 'product-buy-buttons', product: product, form: form, block: block -%}
-{% comment %} 
-          {%- when 'text' -%}
-            {%- if block.settings.content != blank -%}
-              <div class="product-meta__text rte min-qty" style="margin-bottom:10px;" {{ block.shopify_attributes }}>
-                {{- block.settings.content -}} 
-              </div>
-            {%- endif -%} {% endcomment %}
 
           {%- when 'button' -%}
             {%- if block.settings.text != blank -%}
-              <div class="d-flex flex-row-reverse justify-content-between align-items-center">
-                <a
-                  href="{{ block.settings.link | replace: "***", product.metafields.custom.odoo_id }}" 
-                  class="product-meta__button button button--primary button-pdf" 
-                  {{ block.shopify_attributes }}
-                >
-                  {{ block.settings.text | escape }}
-                </a>
-              </div>
+              <script>
+                $(document).ready(function() {
+                  var strPriceBreakButtonHtml = `
+                    <div class="d-flex justify-content-between align-items-center">
+                      <a
+                        href="{{ block.settings.link | replace: "***", product.metafields.custom.odoo_id }}" 
+                        class="product-meta__button button button--primary button-pdf" 
+                        {{ block.shopify_attributes }}
+                      >
+                        {{ block.settings.text | escape }}
+                      </a>
+                    </div>`;
+                  $(".price-list-variant").after(strPriceBreakButtonHtml);
+                });
+              </script>
             {%- endif -%}
 
           {%- when 'store_pickup' -%}

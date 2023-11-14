@@ -140,8 +140,8 @@
   <input type="hidden" name="id" data-sku="{{ selected_variant.sku }}" value="{{ selected_variant.id }}">
 {%- endunless -%}
 
-<div class="product-form__info-list">
-  <div class="product-form__info-item">
+<div class="product-form__info-list product-variant-form">
+  <div class="product-form__info-item price-list-variant">
     <span class="product-form__info-title text--strong">{{ 'product.form.price' | t }}:</span>
 
     <div class="product-form__info-content" role="region" aria-live="polite">
@@ -212,7 +212,6 @@
       {%- endif -%}
     </div>
   </div>
-
   {%- if block.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
     <div class="product-form__info-item">
       <span class="product-form__info-title text--strong">{{ 'product.form.inventory' | t }}:</span>

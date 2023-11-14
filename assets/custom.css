@@ -84,13 +84,14 @@ main.Online-Store-UI-MainArea_15wjo Online-Store-UI-MainArea--usesBottomSheet_lz
 /* End Link Button */
 
 .button-pdf {
+  margin-bottom: 0;
   background-color: #3f6e7c;
-   color: #fff;
-   font-size: 16px;
-   padding: 0 30px;
-   text-align: center;
-   display: inline-block;
-   text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 0 30px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
 }
 .button-pdf:hover {
   background: #335c68;
@@ -213,4 +214,8 @@ a.product-item__vendor {
 
 .product-item__info-inner span {
   font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 14px));
+}
+
+.product-variant-form {
+  display: block;
 }
