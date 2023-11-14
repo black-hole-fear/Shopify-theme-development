@@ -219,3 +219,12 @@ a.product-item__vendor {
 .product-variant-form {
   display: block;
 }
+
+.product-item-vendor {
+  color: #00BADB;
+}
+
+.product-item-vendor:hover {
+  color: #52D8E7;
+  text-decoration: underline;
+}

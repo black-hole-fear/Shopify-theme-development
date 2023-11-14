@@ -147,18 +147,34 @@
       {%- endcapture -%}
 
       {%- capture vendor -%}
+        <div class="d-flex align-items-center">
         {%- if settings.show_vendor -%}
           {%- assign vendor_handle = product.vendor | handle -%}
           {%- assign collection_for_vendor = collections[vendor_handle] -%}
 
-          <h6 style="font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 14px));
-            margin-bottom: 0;">SKU: {{ product.selected_or_first_available_variant.sku }}</h6>
           {%- unless collection_for_vendor.empty? -%}
-            <a class="product-item__vendor link" href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+            <a 
+              class="product-item__vendor link" 
+              href="{{ collection_for_vendor.url }}"
+              style="color: #52D8E7;"
+            >
+              {{ product.vendor }}
+            </a>
+            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> 
           {%- else -%}
-            <a class="product-item__vendor link" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+            <a 
+              class="product-item__vendor link" 
+              href="{{ product.vendor | url_for_vendor }}"
+              style="color: #52D8E7;"
+            >
+              {{ product.vendor }}
+            </a>
+            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
           {%- endunless -%}
         {%- endif -%}
+        <h6 style="font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 14px));
+          margin-bottom: 0;">SKU: {{ product.selected_or_first_available_variant.sku }}</h6>
+        </div>
       {%- endcapture -%}
 
       {%- assign current_variant = product.selected_or_first_available_variant -%}
