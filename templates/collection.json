@@ -13,7 +13,7 @@
         "show_quick_view": "list",
         "quick_links": "",
         "quick_links_show_products_count": true,
-        "show_filters": false,
+        "show_filters": true,
         "show_filter_color_swatch": true,
         "open_group_filters_mode": "all_open"
       }
@@ -25,7 +25,7 @@
         "image_position": "left",
         "image_width": 25,
         "title": "Your title",
-        "content": "<p>Use this text to share information about your brand with your customers.<br\/>Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "content": "<p>Use this text to share information about your brand with your customers.<br\/>Describe a product, share announcements, or welcome customers to your store.<\/p>{{ collection.metafields.custom.theme_template_content | metafield_tag }}",
         "button_text": "Our products",
         "button_link": "shopify:\/\/collections\/all"
       }
